@@ -1,9 +1,15 @@
-﻿namespace aspnetcore_apexcharts.Models
+﻿using System;
+using System.Linq;
+
+namespace aspnetcore_apexcharts.Models
 {
     public class ChartResponse
     {
-        public string Id { get; set; }
+        private static string ChartLetters { get; } = "abcdefghijklmnopqrstuvwxyz";
 
-        public Options Options { get; set; }
+        public string Id { get; set; } = new string(Enumerable.Repeat(ChartLetters, 25)
+            .Select(s => s[new Random().Next(s.Length)]).ToArray());
+
+        protected Options Options { get; set; }
     }
 }

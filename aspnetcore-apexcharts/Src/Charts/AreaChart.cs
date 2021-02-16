@@ -4,10 +4,9 @@ namespace aspnetcore_apexcharts.Charts
 {
     public class AreaChart: ChartApex, IComplexData
     {
-        public AreaChart() => Type = "donut";
+        public AreaChart() => Options.Chart.Type = "area";
         
-
-        public void Add(string name, string[] data)
+        public void Add(string name, int[] data)
         {
         }
     }

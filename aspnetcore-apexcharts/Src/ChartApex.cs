@@ -1,15 +1,10 @@
 ﻿using System;
 using System.Linq;
+using aspnetcore_apexcharts.Models;
 
 namespace aspnetcore_apexcharts
 {
-    public class ChartApex
+    public class ChartApex: ChartResponse
     {
-        private static string ChartLetters { get; } = "abcdefghijklmnopqrstuvwxyz";
-
-        public string Id { get; set; } = new string(Enumerable.Repeat(ChartLetters, 25)
-            .Select(s => s[new Random().Next(s.Length)]).ToArray());
-        protected string Type { get; set; } = "donut";
-        
     }
 }

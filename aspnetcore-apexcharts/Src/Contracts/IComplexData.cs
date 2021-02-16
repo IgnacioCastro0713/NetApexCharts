@@ -2,6 +2,6 @@
 {
     public interface IComplexData
     {
-        public void Add(string name, string[] data);
+        public void Add(string name, int[] data);
     }
 }
