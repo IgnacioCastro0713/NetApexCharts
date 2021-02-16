@@ -6,5 +6,7 @@ namespace aspnetcore_apexcharts
 {
     public class ChartApex: ChartResponse
     {
+
+        public string[] Labels { get; set; }
     }
 }

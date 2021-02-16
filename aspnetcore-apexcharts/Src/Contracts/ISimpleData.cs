@@ -4,6 +4,6 @@ namespace aspnetcore_apexcharts.Contracts
 {
     public interface ISimpleData
     {
-        public void Add(string[] data);
+        public void Add(int[] data);
     }
 }
