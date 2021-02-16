@@ -3,20 +3,10 @@ using aspnetcore_apexcharts.Models;
 
 namespace aspnetcore_apexcharts
 {
-    public class NetApexChart: ChartResponse
+    public class NetApexChart : ChartResponse
     {
-
-        public string[] Labels { get; set; }
-
-
-        public AreaNetApexChart AreaChart()
-        {
-            return new AreaNetApexChart();
-        }
-        
-        public DonutNetApexChart DonutChart()
-        {
-            return new DonutNetApexChart();
-        }
+        protected string[] Labels { get; set; }
+        public  AreaChart AreaChart() => new AreaChart();
+        public DonutChart DonutChart() => new DonutChart();
     }
 }
