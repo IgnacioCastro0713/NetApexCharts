@@ -2,6 +2,6 @@
 {
     public class PlotOptions
     {
-        public Bar Bar { get; set; }
+        public Bar Bar { get; set; } = new Bar();
     }
 }

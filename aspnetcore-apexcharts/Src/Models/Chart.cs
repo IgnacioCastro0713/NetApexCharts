@@ -5,6 +5,6 @@
         public string Type { get; set; }
         public int Height { get; set; }
         public int Width { get; set; }
-        public Toolbar Toolbar { get; set; }
+        public Toolbar Toolbar { get; set; } = new Toolbar();
     }
 }

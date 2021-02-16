@@ -6,11 +6,10 @@ namespace aspnetcore_apexcharts.Charts
 {
     public class AreaChart : NetApexChart, IComplexData<AreaChart>
     {
-        public AreaChart() => Options.Chart.Type = "area";
-
+        public AreaChart() => MainChar.Options.Chart.Type = "area";
         public AreaChart AddData(string name, int[] data)
         {
-            Options.Series = Options.Series.Concat(new[]
+            MainChar.Options.Series = MainChar.Options.Series.Concat(new[]
             {
                 new Series()
                 {

@@ -5,12 +5,12 @@ namespace aspnetcore_apexcharts.Charts
 {
     public class DonutChart : NetApexChart, ISimpleData<DonutChart>
     {
-        public DonutChart() => Options.Chart.Type = "donut";
+        public DonutChart() => MainChar.Options.Chart.Type = "donut";
 
         public DonutChart AddData(int[] data)
         {
             var series = new Series {Name = "", Data = data};
-            Options.Series = new[]
+            MainChar.Options.Series = new[]
             {
                 series
             };

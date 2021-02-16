@@ -10,6 +10,6 @@ namespace aspnetcore_apexcharts.Models
         protected string Id { get; set; } = new string(Enumerable.Repeat(ChartLetters, 25)
             .Select(s => s[new Random().Next(s.Length)]).ToArray());
 
-        protected Options Options { get; set; }
+        public Options Options { get; set; } = new Options();
     }
 }

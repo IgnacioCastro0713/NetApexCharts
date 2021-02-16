@@ -4,5 +4,6 @@ namespace aspnetcore_apexcharts.Models
 {
     public class SubTitle : TextAttribute
     {
+        public string Position { get; set; }
     }
 }

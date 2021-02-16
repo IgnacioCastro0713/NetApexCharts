@@ -1,5 +1,7 @@
 ﻿
 
+using aspnetcore_apexcharts.Models;
+
 namespace aspnetcore_apexcharts
 {
     public class Class1
