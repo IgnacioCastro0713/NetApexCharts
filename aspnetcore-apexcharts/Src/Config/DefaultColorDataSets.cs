@@ -1,8 +1,8 @@
 ﻿namespace aspnetcore_apexcharts.Config
 {
-    public class DefaultColorDataSets
+    public static class DefaultColorDataSets
     {
-        public string[] Colors =>
+        public static string[] Colors =>
             new[]
             {
                 "#008FFB", "#00E396", "#feb019", "#ff455f", "#775dd0", "#80effe",
