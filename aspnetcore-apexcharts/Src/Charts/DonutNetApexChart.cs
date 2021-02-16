@@ -3,9 +3,9 @@ using aspnetcore_apexcharts.Models;
 
 namespace aspnetcore_apexcharts.Charts
 {
-    public class DonutChart : ChartApex, ISimpleData
+    public class DonutNetApexChart : NetApexChart, ISimpleData
     {
-        public DonutChart() => Options.Chart.Type = "donut";
+        public DonutNetApexChart() => Options.Chart.Type = "donut";
 
         public void Add(int[] data)
         {
