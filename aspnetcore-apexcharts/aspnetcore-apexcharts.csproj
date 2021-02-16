@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>aspnetcore_apexcharts</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Src\" />
+    <Folder Include="Src\Contracts" />
+  </ItemGroup>
+
+</Project>
