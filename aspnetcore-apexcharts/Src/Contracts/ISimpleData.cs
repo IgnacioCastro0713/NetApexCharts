@@ -1,7 +1,6 @@
-﻿
-namespace aspnetcore_apexcharts.Contracts
+﻿namespace aspnetcore_apexcharts.Contracts
 {
-    public interface ISimpleData <out T>
+    public interface ISimpleData<out T>
     {
         public T AddData(int[] data);
     }

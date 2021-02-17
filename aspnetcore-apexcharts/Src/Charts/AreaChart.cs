@@ -4,20 +4,11 @@ using aspnetcore_apexcharts.Models;
 
 namespace aspnetcore_apexcharts.Charts
 {
-    public class AreaChart : NetApexChart, IComplexData<AreaChart>
+    public class AreaChart : NetApexChart, IComplexData<NetApexChart>
     {
-        public AreaChart() => MainChar.Options.Chart.Type = "area";
-        public AreaChart AddData(string name, int[] data)
+        public AreaChart()
         {
-            MainChar.Options.Series = MainChar.Options.Series.Concat(new[]
-            {
-                new Series()
-                {
-                    Name = name,
-                    Data = data
-                }
-            });
-            return this;
+            MainChar.Options.Chart.Type = "area";
         }
     }
 }

@@ -11,7 +11,7 @@ namespace aspnetcore_apexcharts.Models
         public Chart Chart { get; set; } = new Chart();
         public PlotOptions PlotOptions { get; set; } = new PlotOptions();
         public string[] Colors { get; set; } = DefaultColorDataSets.Colors;
-        public IEnumerable<Series> Series { get; set; }
+        public Series[] Series { get; set; }
         public DataLabels DataLabels { get; set; } = new DataLabels();
         public Title Title { get; set; } = new Title();
         public SubTitle SubTitle { get; set; } = new SubTitle();

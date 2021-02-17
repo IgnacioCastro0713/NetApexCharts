@@ -17,7 +17,7 @@ namespace aspnetcore_apexcharts.Models
         }
 
         public Toolbar Toolbar { get; set; } = new Toolbar();
-        
-        public Zoom Zoom { get; set; }
+
+        public Zoom Zoom { get; set; } = new Zoom();
     }
 }

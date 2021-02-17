@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Text.Json;
+﻿using System.Linq;
 using aspnetcore_apexcharts.Charts;
 using aspnetcore_apexcharts.Config;
 using aspnetcore_apexcharts.Models;
@@ -18,16 +17,49 @@ namespace aspnetcore_apexcharts
 
         #region Constructors
 
-        public NetApexChart() => MainChar = new ChartResponse();
-        
+        public NetApexChart()
+        {
+            MainChar = new ChartResponse();
+        }
+
 
         // Chart constructors
-        public AreaChart AreaChart() => new AreaChart();
-        public DonutChart DonutChart() => new DonutChart();
+        public AreaChart AreaChart()
+        {
+            return new AreaChart();
+        }
+
+        public DonutChart DonutChart()
+        {
+            return new DonutChart();
+        }
 
         #endregion
 
         #region Methods
+        
+        public virtual NetApexChart AddData(string name, int[] data)
+        {
+            var series = new Series {Data = data, Name = name};
+            if (MainChar.Options.Series == null)
+            {
+                MainChar.Options.Series = new[] {series};
+                return this;
+            }
+
+            MainChar.Options.Series = MainChar.Options.Series.Concat(new[] {series}).ToArray();
+            return this;
+        }
+
+        public virtual NetApexChart AddData(int[] data)
+        {
+            var series = new Series {Name = "", Data = data};
+            MainChar.Options.Series = new[]
+            {
+                series
+            };
+            return this;
+        }
 
         public NetApexChart SetType(string type)
         {
@@ -35,7 +67,7 @@ namespace aspnetcore_apexcharts
             return this;
         }
 
-        public NetApexChart SetDataSets(IEnumerable<Series> series)
+        public NetApexChart SetDataSets(Series[] series)
         {
             MainChar.Options.Series = series;
             return this;
@@ -74,7 +106,7 @@ namespace aspnetcore_apexcharts
         public NetApexChart SetSubTitle(string subtitle, string position = "left")
         {
             MainChar.Options.SubTitle.Text = subtitle;
-            MainChar.Options.SubTitle.Position = position;
+            MainChar.Options.SubTitle.Align = position;
             return this;
         }
 

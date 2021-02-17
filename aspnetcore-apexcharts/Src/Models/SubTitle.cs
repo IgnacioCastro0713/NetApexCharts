@@ -7,6 +7,6 @@ namespace aspnetcore_apexcharts.Models
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
     public class SubTitle : TextAttribute
     {
-        public string Position { get; set; }
+        public string Align { get; set; }
     }
 }

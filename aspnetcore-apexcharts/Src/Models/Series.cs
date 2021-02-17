@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
 namespace aspnetcore_apexcharts.Models
@@ -7,6 +8,6 @@ namespace aspnetcore_apexcharts.Models
     public class Series
     {
         public string Name { get; set; }
-        public int[] Data { get; set; }
+        public int[] Data { get; set; } = Array.Empty<int>();
     }
 }

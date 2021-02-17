@@ -4,7 +4,7 @@ using NUnit.Framework;
 
 namespace aspnetcore_apexchart_test
 {
-    public class Tests
+    public class NetApexChartTest
     {
         [Test]
         public void Test1()

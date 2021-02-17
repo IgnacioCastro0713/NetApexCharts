@@ -3,22 +3,11 @@ using aspnetcore_apexcharts.Models;
 
 namespace aspnetcore_apexcharts.Charts
 {
-    public class DonutChart : NetApexChart, ISimpleData<DonutChart>
+    public class DonutChart : NetApexChart, ISimpleData<NetApexChart>
     {
         public DonutChart()
         {
-            
             MainChar.Options.Chart.Type = "donut";
-        }
-
-        public DonutChart AddData(int[] data)
-        {
-            var series = new Series {Name = "", Data = data};
-            MainChar.Options.Series = new[]
-            {
-                series
-            };
-            return this;
         }
     }
 }

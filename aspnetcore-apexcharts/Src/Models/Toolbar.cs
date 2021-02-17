@@ -5,7 +5,7 @@ using Newtonsoft.Json.Serialization;
 namespace aspnetcore_apexcharts.Models
 {
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-    public  class Toolbar : ShowAttribute
+    public class Toolbar : ShowAttribute
     {
     }
 }

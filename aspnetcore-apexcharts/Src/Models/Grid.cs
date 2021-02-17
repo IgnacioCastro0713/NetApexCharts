@@ -5,8 +5,8 @@ using Newtonsoft.Json.Serialization;
 namespace aspnetcore_apexcharts.Models
 {
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-    public class Grid: ShowAttribute
-    { 
+    public class Grid : ShowAttribute
+    {
         public Row Row { get; set; }
     }
 }
