@@ -5,8 +5,9 @@ using Newtonsoft.Json.Serialization;
 namespace aspnetcore_apexcharts.Models
 {
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-    public class SubTitle : TextAttribute
+    public class Stroke: ShowAttribute
     {
-        public string Position { get; set; }
+        public int Width { get; set; }
+        public string[] Colors { get; set; }
     }
 }

@@ -1,12 +1,11 @@
-﻿using aspnetcore_apexcharts.Models.Common;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
 namespace aspnetcore_apexcharts.Models
 {
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-    public class SubTitle : TextAttribute
+    public class Hover
     {
-        public string Position { get; set; }
+        public int Size { get; set; }
     }
 }

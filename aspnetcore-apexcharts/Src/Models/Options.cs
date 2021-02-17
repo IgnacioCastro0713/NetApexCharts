@@ -1,8 +1,11 @@
 ﻿using System.Collections.Generic;
 using aspnetcore_apexcharts.Config;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace aspnetcore_apexcharts.Models
 {
+    [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
     public class Options
     {
         public Chart Chart { get; set; } = new Chart();
@@ -15,5 +18,6 @@ namespace aspnetcore_apexcharts.Models
         public Xaxis Xaxis { get; set; } = new Xaxis();
         public Grid Grid { get; set; } = new Grid();
         public Makers Makers { get; set; } = new Makers();
+        public Stroke Stroke { get; set; }
     }
 }

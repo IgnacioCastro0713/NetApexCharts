@@ -1,12 +1,12 @@
-﻿using aspnetcore_apexcharts.Models.Common;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
 namespace aspnetcore_apexcharts.Models
 {
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
-    public class SubTitle : TextAttribute
+    public class Row
     {
-        public string Position { get; set; }
+        public string[] Colors { get; set; }
+        public double Opacity { get; set; }
     }
 }
