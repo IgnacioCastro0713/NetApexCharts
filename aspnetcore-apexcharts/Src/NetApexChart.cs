@@ -1,6 +1,4 @@
-﻿using System.Linq;
-using aspnetcore_apexcharts.Charts;
-using aspnetcore_apexcharts.Config;
+﻿using aspnetcore_apexcharts.Config;
 using aspnetcore_apexcharts.Models;
 using Newtonsoft.Json;
 
@@ -17,49 +15,11 @@ namespace aspnetcore_apexcharts
 
         #region Constructors
 
-        public NetApexChart()
-        {
-            MainChar = new ChartResponse();
-        }
-
-
-        // Chart constructors
-        public AreaChart AreaChart()
-        {
-            return new AreaChart();
-        }
-
-        public DonutChart DonutChart()
-        {
-            return new DonutChart();
-        }
+        protected NetApexChart() => MainChar = new ChartResponse();
 
         #endregion
 
         #region Methods
-        
-        public virtual NetApexChart AddData(string name, int[] data)
-        {
-            var series = new Series {Data = data, Name = name};
-            if (MainChar.Options.Series == null)
-            {
-                MainChar.Options.Series = new[] {series};
-                return this;
-            }
-
-            MainChar.Options.Series = MainChar.Options.Series.Concat(new[] {series}).ToArray();
-            return this;
-        }
-
-        public virtual NetApexChart AddData(int[] data)
-        {
-            var series = new Series {Name = "", Data = data};
-            MainChar.Options.Series = new[]
-            {
-                series
-            };
-            return this;
-        }
 
         public NetApexChart SetType(string type)
         {
