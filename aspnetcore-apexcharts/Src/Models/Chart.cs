@@ -8,7 +8,7 @@ namespace aspnetcore_apexcharts.Models
     {
         private string _width;
         public string Type { get; set; }
-        public int Height { get; set; }
+        public int Height { get; set; } = 500;
 
         public string Width
         {

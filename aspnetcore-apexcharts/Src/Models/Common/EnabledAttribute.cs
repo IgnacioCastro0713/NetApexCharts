@@ -6,6 +6,6 @@ namespace aspnetcore_apexcharts.Models.Common
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
     public class EnabledAttribute
     {
-        public bool Enable { get; set; } = true;
+        public bool Enabled { get; set; } = true;
     }
 }

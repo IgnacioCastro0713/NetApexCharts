@@ -109,7 +109,7 @@ namespace aspnetcore_apexcharts
                 Colors = colors,
                 StrokeColors = "#fff",
                 StrokeWidth = (double) width / 2,
-                Hover = new Hover {Size = hoverSize}
+                //Hover = new Hover {Size = hoverSize}
             };
 
             return this;
@@ -131,14 +131,14 @@ namespace aspnetcore_apexcharts
         public NetApexChart SetToolbar(bool show, bool zoom = true)
         {
             MainChar.Options.Chart.Toolbar = new Toolbar {Show = show};
-            MainChar.Options.Chart.Zoom = new Zoom {Enable = zoom};
+            MainChar.Options.Chart.Zoom = new Zoom {Enabled = zoom};
             return this;
         }
 
 
-        public NetApexChart SetDataLabels()
+        public NetApexChart SetDataLabels(bool enable = true)
         {
-            MainChar.Options.DataLabels = new DataLabels {Enable = true};
+            MainChar.Options.DataLabels = new DataLabels {Enabled = enable};
             return this;
         }
 
@@ -146,8 +146,11 @@ namespace aspnetcore_apexcharts
         {
             var settings = new JsonSerializerSettings
             {
+                Formatting = Formatting.None,
                 NullValueHandling = NullValueHandling.Ignore
             };
+
+
             return JsonConvert.SerializeObject(MainChar, settings);
         }
 
