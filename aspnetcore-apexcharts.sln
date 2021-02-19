@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspnetcore-apexcharts", "aspnetcore-apexcharts\aspnetcore-apexcharts.csproj", "{83D82BC0-0BF9-4A0D-B7B9-EE10103149B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.ApexCharts.Library", "Net.ApexCharts.Library\Net.ApexCharts.Library.csproj", "{83D82BC0-0BF9-4A0D-B7B9-EE10103149B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspnetcore-apexchart-test", "aspnetcore-apexchart-test\aspnetcore-apexchart-test.csproj", "{598FF499-4ACB-406C-8397-7BE28C5206EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.ApexCharts.Test", "Net.ApexCharts.Test\Net.ApexCharts.Test.csproj", "{598FF499-4ACB-406C-8397-7BE28C5206EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
