@@ -1,0 +1,12 @@
+﻿#Foders
+/Net.ApexCharts.Library/bin
+/Net.ApexCharts.Library/obj
+
+/Net.ApexCharts.Test/bin
+/Net.ApexCharts.Test/obj
+
+/.idea
+/.vs
+
+aspnetcore-apexcharts.sln.DotSettings.user
+
