@@ -1,4 +1,5 @@
-﻿using aspnetcore_apexcharts.Config;
+﻿using System.Linq;
+using aspnetcore_apexcharts.Config;
 using aspnetcore_apexcharts.Models;
 using Newtonsoft.Json;
 
@@ -9,7 +10,6 @@ namespace aspnetcore_apexcharts
         #region Properties
 
         protected ChartResponse MainChar { get; }
-        private string[] Labels { get; set; }
 
         #endregion
 
@@ -72,7 +72,7 @@ namespace aspnetcore_apexcharts
 
         public NetApexChart SetLabels(string[] labels)
         {
-            Labels = labels;
+            MainChar.Options.Labels = labels;
             return this;
         }
 
@@ -150,8 +150,51 @@ namespace aspnetcore_apexcharts
                 NullValueHandling = NullValueHandling.Ignore
             };
 
+            var series = MainChar.Options.Series;
+            var array = MainChar.Options.Series.SelectMany(s => s.Data).ToArray();
 
-            return JsonConvert.SerializeObject(MainChar, settings);
+            if (MainChar.Options.Chart.Type.Equals("donut"))
+            {
+                return JsonConvert.SerializeObject(new
+                {
+                    MainChar.Id,
+                    Options = new
+                    {
+                        MainChar.Options.Chart,
+                        MainChar.Options.PlotOptions,
+                        MainChar.Options.Colors,
+                        Series = array,
+                        MainChar.Options.DataLabels,
+                        MainChar.Options.Title,
+                        MainChar.Options.SubTitle,
+                        MainChar.Options.Xaxis,
+                        MainChar.Options.Grid,
+                        MainChar.Options.Makers,
+                        MainChar.Options.Labels,
+                        MainChar.Options.Stroke,
+                    }
+                }, settings);
+            }
+
+            return JsonConvert.SerializeObject(new
+            {
+                MainChar.Id,
+                Options = new
+                {
+                    MainChar.Options.Chart,
+                    MainChar.Options.PlotOptions,
+                    MainChar.Options.Colors,
+                    Series = series,
+                    MainChar.Options.DataLabels,
+                    MainChar.Options.Title,
+                    MainChar.Options.SubTitle,
+                    MainChar.Options.Xaxis,
+                    MainChar.Options.Grid,
+                    MainChar.Options.Makers,
+                    MainChar.Options.Labels,
+                    MainChar.Options.Stroke,
+                }
+            }, settings);
         }
 
         #endregion

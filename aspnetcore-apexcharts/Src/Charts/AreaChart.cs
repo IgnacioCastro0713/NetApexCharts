@@ -19,7 +19,6 @@ namespace aspnetcore_apexcharts.Charts
                 MainChar.Options.Series = new[] {series};
                 return this;
             }
-
             MainChar.Options.Series = MainChar.Options.Series.Concat(new[] {series}).ToArray();
             return this;
         }
